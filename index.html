@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimal Road Construction (MST)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🏗️ Optimal Road Construction</h1>
+            <p>Using <strong>Kruskal's Algorithm</strong> to build cost-effective road networks.</p>
+        </header>
+
+        <!-- Input Section -->
+        <section class="input-section">
+            <h2>📝 Enter Details</h2>
+            <div class="form-group">
+                <label for="cities">Number of Cities:</label>
+                <input type="number" id="cities" placeholder="Enter number of cities" min="2" required>
+            </div>
+
+            <div class="form-group">
+                <label for="edges">Roads (Format: CityA,CityB,Cost):</label>
+                <textarea id="edges" placeholder="Example: 0,1,10; 0,2,5; 1,3,15" required></textarea>
+            </div>
+
+            <button class="btn" onclick="calculateMST()">🚀 Calculate Optimal Roads</button>
+        </section>
+
+        <!-- Results Section -->
+        <section id="result" class="hidden">
+            <h2>📊 Minimum Spanning Tree (MST)</h2>
+            <div id="mst-edges"></div>
+            <p class="total-cost">💰 Total Construction Cost: ₹<span id="cost">0</span></p>
+        </section>
+
+        <!-- Map Visualization -->
+        <section class="map-container">
+            <h2>🗺️ Visual Representation</h2>
+            <div class="map-wrapper">
+                <!-- 📌 Add your India map image in assets folder and name it 'india-map.png' -->
+                <img src="map.jpg" alt="India Map" class="map-image">
+                <div id="road-overlay">
+                    <!-- 🚧 Dynamic road connections will be drawn here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with ❤️ | Kruskal's Algorithm Visualizer</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
